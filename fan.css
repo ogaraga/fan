@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  margin: auto;
+  height: 100vh;
+  background-color: tomato;
+}
+#onoff {
+  text-align: center;
+  font-size: 21px;
+  margin-top: 10px;
+  position: absolute;
+  top: 70%;
+  color: white;
+}
+.fan.active::before {
+  display: block;
+  overflow: visible;
+  animation: fanbefore 0.4s linear infinite;
+}
+.fan::before {
+  content: "";
+  width: 50px;
+  height: 500px;
+  background-color: black;
+  position: absolute;
+  top: -210px;
+  left: 25%;
+  overflow: hidden;
+  z-index: -1;
+  transform-origin: center;
+  border-top-left-radius: 20px;
+  transform: translate(-40%, -50%);
+}
+@keyframes fanbefore {
+  0% {
+    transform: rotate(300deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+.fan.active::after {
+  display: block;
+  overflow: visible;
+  animation: fanafter 0.4s linear infinite;
+}
+.fan::after {
+  content: "";
+  width: 50px;
+  height: 500px;
+  background-color: black;
+  position: absolute;
+  top: -210px;
+  left: 25%;
+  overflow: hidden;
+  z-index: -1;
+  transform-origin: center;
+  border-bottom-right-radius: 20px;
+  transform: translate(-40%, -50%);
+}
+@keyframes fanafter {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(500deg);
+  }
+}
+
+.fan {
+  width: 100px;
+  height: 100px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: black;
+  color: grey;
+  margin: 200px auto;
+  border: 2px solid white;
+  border-width: 7px;
+  border-radius: 50%;
+}
+.last {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  background-color: white;
+  color: black;
+  margin: auto;
+  z-index: 10;
+  border: 2px solid black;
+  border-width: 5px;
+  border-radius: 50%;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.sub {
+  width: 50%;
+  height: 50%;
+  z-index: 10;
+  position: absolute;
+  background-color: darkcyan;
+  color: blue;
+  margin: auto;
+  border: 2px solid white;
+  border-width: 5px;
+  border-radius: 50%;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#click {
+  padding: 10px;
+  width: 150px;
+  margin: auto;
+  background-color: grey;
+  color: white;
+  font-size: 21px;
+  top: 80%;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  position: absolute;
+}
+#click2 {
+  position: absolute;
+  padding: 10px;
+  width: 150px;
+  margin: auto;
+  top: 80%;
+  display: none;
+  background-color: red;
+  color: white;
+  font-size: 21px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
