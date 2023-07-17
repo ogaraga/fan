@@ -14,4 +14,5 @@ btn2.addEventListener("click", () => {
     fan.classList.remove('active');
     btn.style.display = "block";
     btn2.style.display = "none";
+     onoff.textContent = "Fan Is Off";
 })
