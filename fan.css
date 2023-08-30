@@ -102,7 +102,6 @@ body {
   border: 2px solid black;
   border-width: 5px;
   border-radius: 50%;
-  border-radius: 50%;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -117,7 +116,6 @@ body {
   margin: auto;
   border: 2px solid white;
   border-width: 5px;
-  border-radius: 50%;
   border-radius: 50%;
   left: 50%;
   top: 50%;
